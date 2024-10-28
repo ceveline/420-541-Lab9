@@ -42,7 +42,6 @@ public class AIController : MonoBehaviour
             StateMachine.TransitionToState(StateType.Patrol);
 
         StateMachine.Update();
-
     }
 
     public bool CanSeePlayer()
@@ -62,5 +61,6 @@ public class AIController : MonoBehaviour
         float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
         return distanceToPlayer <= AttackRange;
     }
+
 
 }

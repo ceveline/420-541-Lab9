@@ -11,7 +11,7 @@ public class ChaseState : IState
 
     public void Enter()
     {
-        aiController.Animator.SetBool("isChasing", true);
+	   aiController.Animator.SetBool("isChasing", true);
         // No animations, so no need to set any animator parameters
     }
 
@@ -36,5 +36,6 @@ public class ChaseState : IState
     {
         // No cleanup necessary
     }
+
 
 }

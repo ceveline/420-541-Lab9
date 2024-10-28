@@ -46,4 +46,5 @@ public class PatrolState : IState
         currentWaypointIndex = (currentWaypointIndex + 1) % aiController.Waypoints.Length;
     }
 
+
 }
