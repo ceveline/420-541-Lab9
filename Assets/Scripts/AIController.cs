@@ -31,6 +31,18 @@ public class AIController : MonoBehaviour
         StateMachine.Update();
         Animator.SetFloat("CharacterSpeed", Agent.velocity.magnitude);
         currentState = StateMachine.GetCurrentStateType();
+
+        float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
+
+        if (distanceToPlayer < 2f)
+            StateMachine.TransitionToState(StateType.Attack);
+        else if (distanceToPlayer < 10f)
+            StateMachine.TransitionToState(StateType.Chase);
+        else
+            StateMachine.TransitionToState(StateType.Patrol);
+
+        StateMachine.Update();
+
     }
 
     public bool CanSeePlayer()
