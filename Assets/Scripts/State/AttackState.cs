@@ -30,7 +30,7 @@ public class AttackState : IState
         }
 
         // Restart the level since the player is "hit"
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void Exit()
